@@ -35,35 +35,26 @@ public class SunWithGlasses extends Sun implements Shape
 	// get the GeneralPath that we are going to append stuff to
 	GeneralPath gp = this.get();
 	
-	// Make three windows, spaced like this, where w=width/10.0;
-	// | +--+ +--+ +--+ |
-	// | |  | |  | |  | |
-	// | +--+ +--+ +--+ |
-	// |w 2w w 2w w w2 w|
-	//
-	// The top of window will be at y + 0.5*height and the
-	// height of the window is 0.25height;
-
-	double w = 0.35 * r;
-	double winTop = y + 0.25 * r;
-	double winHt =  0.25 * .5 * r;
-
-
-	//	Rectangle2D.Double win1 =
-	//  new Rectangle2D.Double(x + w, winTop, 2.0 * w, winHt);
-	//Rectangle2D.Double win2 =
-	//  new Rectangle2D.Double(x + 4.0*w, winTop, 2.0 * w, winHt);
-	//Rectangle2D.Double win3 =
-	// new Rectangle2D.Double(x + 7.0*w, winTop, 2.0 * w, winHt);
+	// make rectangles to draw glasses on the sun
 	
-	// add the windows to the house
-	// Look up the meaning of the second parameter of append
-	// (Hint--is a method of "GeneralPath")
+	double w = 0.30 * r;
+	double winTop = y - .25*r;
+	double winHt =   .45 * r;
+
+
+	Rectangle2D.Double win1 =
+	    new Rectangle2D.Double(x + .55*w, winTop, 2.5 * w, winHt);
+	Rectangle2D.Double win2 =
+	    new Rectangle2D.Double(x - 3.0*w, winTop, 2.5 * w, winHt);
+	Rectangle2D.Double win3 =
+	    new Rectangle2D.Double(x- .75*w, winTop, 2.0 * w, 0);
+	
+	// add the glasses to the sun
 
 	  GeneralPath wholeSun = this.get();
-	  // wholeSun.append(win1, false);
-        //wholeHouse.append(win2, false);
-	// wholeHouse.append(win3, false); 
+	   wholeSun.append(win1, false);
+	   wholeSun.append(win2, false);
+	   wholeSun.append(win3, false); 
     }
 
 }

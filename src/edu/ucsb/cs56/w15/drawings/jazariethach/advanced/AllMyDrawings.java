@@ -58,16 +58,16 @@ public class AllMyDrawings
 	
 	Stroke orig=g2.getStroke();
 	g2.setStroke(thick);
-	g2.setColor(new Color(0x002FA7)); 
+	g2.setColor(new Color(0x008FA9)); 
 	g2.draw(s2); 
 	
-	// Draw two houses with Windows
+	// Draw two suns with glasses
        	
-	SunWithGlasses sg1 = new SunWithGlasses(300,300,50);
-	//	SunWithGlasses sg2 = new SunWithGlasses(200,350,25);
+	SunWithGlasses sg1 = new SunWithGlasses(75,100,50);
+      	SunWithGlasses sg2 = new SunWithGlasses(200,350,25);
 	
 	g2.draw(sg1);
-	g2.setColor(new Color(0x8F00FF)); //g2.draw(sg2);
+	g2.setColor(new Color(0x8F00FF)); g2.draw(sg2);
 	
 	// @@@ FINALLY, SIGN AND LABEL YOUR DRAWING
 	
