@@ -27,37 +27,37 @@ public class Sun extends GeneralPathWrapper implements Shape
        @param y y coord of center of Sun
        @param r radius of the Sun
     */
-    public Sun(double x, double y, double r)
+    public Sun(double x, double y, double r, double r2)
     {
 
 	Ellipse2D.Double sunFace =
-	    new Ellipse2D.Double(x-r, y-r, r*2, r*2);
+	    new Ellipse2D.Double(x-r, y-r2, r*2, r2*2);
 	// make the roof. Remember that y goes DOWN the page,
 	// so we ADD to y to get a "lower" value on the screen
 	Line2D.Double tl =
-	    new Line2D.Double (x , y - 1.5*r,
-			       x - r*.50, y - r*.85 );
+	    new Line2D.Double (x , y - 1.5*r2,
+			       x - r*.50, y - r2*.85 );
 	Line2D.Double bl =
 	    new Line2D.Double (x - 1.5*r , y,
-			       x - r*.85, y - r*.50 );
+			       x - r*.85, y - r2*.50 );
 	Line2D.Double tr =
 	    new Line2D.Double (x + 1.5*r, y,
-			       x + r*.85, y - r*.50 );
+			       x + r*.85, y - r2*.50 );
 	Line2D.Double br =
-	    new Line2D.Double (x + r*.50 , y + r*.85,
-			       x , y +1.5*r );
+	    new Line2D.Double (x + r*.50 , y + r2*.85,
+			       x , y +1.5*r2 );
 	Line2D.Double tl2 =
-	    new Line2D.Double (x , y - 1.5*r ,
-			       x + r*.50 , y - r*.85 );
+	    new Line2D.Double (x , y - 1.5*r2 ,
+			       x + r*.50 , y - r2*.85 );
 	Line2D.Double bl2 =
 	    new Line2D.Double (x - 1.5*r , y,
-			       x - r*.85, y + r*.50 );
+			       x - r*.85, y + r2*.50 );
 	Line2D.Double tr2 =
 	    new Line2D.Double (x + 1.5*r, y,
-			       x + r*.85, y + r*.50 );
+			       x + r*.85, y + r2*.50 );
 	Line2D.Double br2 =
-	    new Line2D.Double (x - r*.50 , y + r*.85,
-			       x , y +1.5*r );
+	    new Line2D.Double (x - r*.50 , y + r2*.85,
+			       x , y +1.5*r2 );
 	// put the sun together
 	GeneralPath wholeSun = this.get();
 	wholeSun.append(sunFace, false);
