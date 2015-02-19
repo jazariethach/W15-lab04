@@ -133,7 +133,7 @@ public class AllMyDrawings
 	g2.drawString("A bunch of suns by Jazarie Thach", 20,20);
 
 	
-	// Draw some coffee cups.
+	// Draw some suns
 	
 	Sun large = new Sun(300,300,100,100);
        Sun small = new Sun(120,80,40,40);
