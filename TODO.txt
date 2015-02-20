@@ -1,0 +1,5 @@
+Splash screen
+Restart game after death/menu options
+add background
+create classes for different animals
+add music/sound
